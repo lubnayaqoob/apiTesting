@@ -18,13 +18,15 @@ is configured so, user can execute in "Run and debug" mode as well.
 The ```package.json``` contains the main script to run the whole program: In Package.json change the name of file if you want to do the testing with a different File. 
 ```
 "scripts": {
-  "test": "NODE_ENV=test mocha './{,!(node_modules)/**/}*.spec.*' --exit", 
+  "testMocha": "mocha 'tests/**/*.js' --recursive --reporter mochawesome --timeout 60000 --exit",
+    "testMocha:awesome": "mocha --reporter mochawesome || true",
+    "open:report": "open mochawesome-report/mochawesome.html"
 }
 ```
 
 ## OutPut
-The system will generate output on the terminal for passed and failed test cases.
-
+The system will generate output report in the form of mochaawsome report and it also display output on the terminal for passed and failed test cases.
+![](image_readmeFile/s.PNG)
 
 ## Questions or Suggestions
 Feel free to send me the questions or suggestion at my email address.
