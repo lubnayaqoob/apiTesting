@@ -1,0 +1,13 @@
+What is generally wrong with the below form?
+
+Form alignment is not good, It is not aesthetically pleasing in the first view. 
+
+
+
+
+Could you write a bug report for 2–3 of your findings?
+
+'Card Type' should not be preselected as 'Visa'
+I am not sure that paytment amount is predefined field, or not But Currency Type is required for transcation
+Country name is missing, 
+Card Number length should be mentioned in the title/lable

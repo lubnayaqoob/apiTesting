@@ -1,0 +1,11 @@
+{
+   "services": {
+     "reqResService": {
+        "baseUrl": "https://reqres.in/api/",
+        "credentials": {
+           "email": "lubnayaqoob@gmail.com",
+           "password": "password"
+        }
+     }
+  }
+}

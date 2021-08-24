@@ -1,0 +1,35 @@
+{
+  "name": "apitesting",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "NODE_ENV=test mocha './{,!(node_modules)/**/}*.spec.*' --exit",
+    "test:watcher": "NODE_ENV=test mocha './{,!(node_modules)/**/}*.spec.js' --watch",
+    "test:coverage": "NODE_ENV=test nyc mocha './{,!(node_modules)/**/}*.spec.js' --exit",
+    "testMocha": "mocha 'tests/**/*.js' --recursive --reporter mochawesome --timeout 60000 --exit",
+    "testMocha:awesome": "mocha --reporter mochawesome || true",
+    "open:report": "open mochawesome-report/mochawesome.html"
+  },
+  "author": "APITesting",
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^4.3.0",
+    "chai-as-promised": "^7.1.1",
+    "chai-http": "^4.3.0",
+    "chai-json-schema": "^1.5.1",
+    "deep-equal-in-any-order": "^1.0.28",
+    "eslint": "^7.20.0",
+    "fs": "0.0.1-security",
+    "mocha": "^8.3.0",
+    "mochawesome": "^6.2.2",
+    "mochawesome-merge": "^4.1.0",
+    "path": "^0.12.7",
+    "sinon": "^9.2.4"
+  },
+  "dependencies": {
+    "got": "^11.8.1",
+    "lodash": "^4.17.21",
+    "nconf": "^0.10.0"
+  }
+}

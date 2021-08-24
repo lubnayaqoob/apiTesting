@@ -1,0 +1,274 @@
+{
+  "stats": {
+    "suites": 4,
+    "tests": 5,
+    "passes": 5,
+    "pending": 0,
+    "failures": 0,
+    "start": "2021-08-24T09:29:39.529Z",
+    "end": "2021-08-24T09:29:40.208Z",
+    "duration": 679,
+    "testsRegistered": 5,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "65f343e3-ef5d-4d2b-af15-eae41f93b54c",
+      "title": "",
+      "fullFile": "",
+      "file": "",
+      "beforeHooks": [
+        {
+          "title": "\"before all\" hook in \"{root}\"",
+          "fullTitle": "\"before all\" hook in \"{root}\"",
+          "timedOut": false,
+          "duration": 0,
+          "state": null,
+          "speed": null,
+          "pass": false,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "try {\n    console.log('Setup run');\n    // await requestService.login();\n} catch (err) {\n    console.log('login hook ');\n    console.log(err);\n}",
+          "err": {},
+          "uuid": "49f361e4-4f87-4f72-86b8-93205f558250",
+          "parentUUID": "65f343e3-ef5d-4d2b-af15-eae41f93b54c",
+          "isHook": true,
+          "skipped": false
+        }
+      ],
+      "afterHooks": [
+        {
+          "title": "\"after all\" hook in \"{root}\"",
+          "fullTitle": "\"after all\" hook in \"{root}\"",
+          "timedOut": false,
+          "duration": 1,
+          "state": null,
+          "speed": null,
+          "pass": false,
+          "fail": false,
+          "pending": false,
+          "context": null,
+          "code": "try {\n    // await requestService.logOut();\n    console.log('try block logout');\n} catch (err) {\n    console.log('catch block logout hook');\n    console.log(err);\n}",
+          "err": {},
+          "uuid": "580879ae-871e-4922-ad1f-d7a40ebdeee1",
+          "parentUUID": "65f343e3-ef5d-4d2b-af15-eae41f93b54c",
+          "isHook": true,
+          "skipped": false
+        }
+      ],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "055c236f-c777-443b-b63a-35798e5d1168",
+          "title": "DELETE /userdata",
+          "fullFile": "C:\\Users\\Lubna Yaqoob\\OneDrive\\Documents\\repositories\\apiTesting\\tests\\reqResModules\\testCases\\deleteUserData.js",
+          "file": "\\tests\\reqResModules\\testCases\\deleteUserData.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should verify delete user data id 5 from list",
+              "fullTitle": "DELETE /userdata should verify delete user data id 5 from list",
+              "timedOut": false,
+              "duration": 213,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const res = await deleteUserDataResponse();\nexpect(res).equals.toString(200);\nconsole.log(res);",
+              "err": {},
+              "uuid": "cffde520-9c8f-4d06-bac4-e8d4346da67d",
+              "parentUUID": "055c236f-c777-443b-b63a-35798e5d1168",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "cffde520-9c8f-4d06-bac4-e8d4346da67d"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 213,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 60000
+        },
+        {
+          "uuid": "4de7bc2b-aaff-4da9-94f8-f4762aee2ef4",
+          "title": "GET /userdata",
+          "fullFile": "C:\\Users\\Lubna Yaqoob\\OneDrive\\Documents\\repositories\\apiTesting\\tests\\reqResModules\\testCases\\getUserData.js",
+          "file": "\\tests\\reqResModules\\testCases\\getUserData.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should return user data of id 1",
+              "fullTitle": "GET /userdata should return user data of id 1",
+              "timedOut": false,
+              "duration": 93,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const res = await getUserDataRecord();\ntry {\n    expect(res.statusCode).to.equal(200);\n    res.should.be.an('object');\n    console.log(res);\n} catch (error) {\n    console.error(error);\n}",
+              "err": {},
+              "uuid": "00b931ec-8003-47d2-b7db-8c75f1090caf",
+              "parentUUID": "4de7bc2b-aaff-4da9-94f8-f4762aee2ef4",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "should validate json schema of user data",
+              "fullTitle": "GET /userdata should validate json schema of user data",
+              "timedOut": false,
+              "duration": 81,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const res = await getUserDataRecord();\nexpect(res).to.be.jsonSchema(testData.schema);\nassert.jsonSchema(res, testData.schema);\n    // expect(res).to.not.be.jsonSchema(schema);",
+              "err": {},
+              "uuid": "166d856f-739e-4663-bf3e-46239be2c317",
+              "parentUUID": "4de7bc2b-aaff-4da9-94f8-f4762aee2ef4",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "00b931ec-8003-47d2-b7db-8c75f1090caf",
+            "166d856f-739e-4663-bf3e-46239be2c317"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 174,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 60000
+        },
+        {
+          "uuid": "2cc77d63-ccfc-48fa-aba8-b950ccd1ffc4",
+          "title": "POST /userdata",
+          "fullFile": "C:\\Users\\Lubna Yaqoob\\OneDrive\\Documents\\repositories\\apiTesting\\tests\\reqResModules\\testCases\\postUserData.js",
+          "file": "\\tests\\reqResModules\\testCases\\postUserData.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should verify response of  a creatednew user with provided request payload",
+              "fullTitle": "POST /userdata should verify response of  a creatednew user with provided request payload",
+              "timedOut": false,
+              "duration": 138,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "try {\n    const res = await createUserDataRecord();\n    expect(res).equals.toString(200);\n    res.should.be.an('object');\n    console.log(res);\n} catch (error) {\n    console.error(error);\n}",
+              "err": {},
+              "uuid": "82ebe1fd-d096-4ca2-9fd7-d98141b50d62",
+              "parentUUID": "2cc77d63-ccfc-48fa-aba8-b950ccd1ffc4",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "82ebe1fd-d096-4ca2-9fd7-d98141b50d62"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 138,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 60000
+        },
+        {
+          "uuid": "acd47e8f-87ab-4a9d-80ce-f39ddd63fd2c",
+          "title": "PUT-Update /userdata",
+          "fullFile": "C:\\Users\\Lubna Yaqoob\\OneDrive\\Documents\\repositories\\apiTesting\\tests\\reqResModules\\testCases\\putUserData.js",
+          "file": "\\tests\\reqResModules\\testCases\\putUserData.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should verify response of  a created new user with provided request payload",
+              "fullTitle": "PUT-Update /userdata should verify response of  a created new user with provided request payload",
+              "timedOut": false,
+              "duration": 129,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const res = await updateRecord();\nres.should.be.an('object');\nconsole.log(res);",
+              "err": {},
+              "uuid": "ae97b525-567b-4923-b239-a3155d0cc7d5",
+              "parentUUID": "acd47e8f-87ab-4a9d-80ce-f39ddd63fd2c",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "ae97b525-567b-4923-b239-a3155d0cc7d5"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 129,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 60000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 60000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "8.4.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "6.2.2"
+    },
+    "marge": {
+      "options": null,
+      "version": "5.2.0"
+    }
+  }
+}
