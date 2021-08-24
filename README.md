@@ -6,7 +6,7 @@ Implementation of Package	Challenge. I have used KnapSack Alogrithm to find the 
 
 Use a node js environment to run this project.
 ```
-Node version v14.17.0
+Node version v10.24.1 
 npm install
 npm run start
 ```
