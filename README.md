@@ -8,7 +8,7 @@ Use a node js environment to run this project.
 ```
 Node version v10.24.1 
 npm install
-npm run start
+npm run testMocha
 ```
 
 ```
